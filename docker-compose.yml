@@ -1,9 +1,13 @@
+name: gastos-whatsapp
+
 services:
-  gastos-whatsapp:
+  api:
     build: .
-    container_name: gastos-whatsapp
+    container_name: gastos-whatsapp-api
     restart: unless-stopped
     ports:
-      - "127.0.0.1:8000:8000"
+      - "127.0.0.1:8010:8000"
     volumes:
       - ./data:/app/data
+    mem_limit: 256m
+    cpus: "0.50"
