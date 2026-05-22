@@ -44,6 +44,17 @@ def whatsapp_webhook(
 
     normalized_message = message.lower()
 
+    if normalized_message in {"hola", "ayuda", "help"}:
+        return twiml_response(
+            "Comandos disponibles:\n"
+            "- resumen hoy\n"
+            "- resumen mes\n"
+            "- categorias disponibles\n"
+            "- eliminar ultimo\n\n"
+            "Para guardar un gasto, escribe algo como:\n"
+            "mercadona 23,50 comida"
+        )
+
     if normalized_message == "resumen hoy":
         expenses = get_today_expenses(user_phone)
         total = sum(expense["amount"] for expense in expenses)
