@@ -17,6 +17,10 @@ data/
 .env.*
 !.env.example
 
+keys/
+*.pem
+*.key
+
 .pytest_cache/
 .coverage
 htmlcov/

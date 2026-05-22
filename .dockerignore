@@ -18,6 +18,10 @@ data
 .env
 .env.*
 
+keys
+*.pem
+*.key
+
 .pytest_cache
 .coverage
 htmlcov
